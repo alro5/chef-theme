@@ -1,0 +1,25 @@
+/*
+* Colors
+**/
+
+$color--primary: #333;
+$color--secondary: rgb(218, 65, 65);
+$color--white: #ffffff;
+$color--black: #000000;
+
+/*
+* Colors
+**/
+$bg--secondary: #3c948b;
+
+$colors: (
+    white  					: $color--white,
+    black 					: $color--black,
+    primary 				: $color--primary,
+    secondary 				: $color--secondary
+);
+
+@each $color, $hex in $colors {
+    .bg--#{$color} { background-color: $hex !important;}
+    .color--#{$color} { color: $hex !important;}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "code-brahs",
+  "description": "Booking dojo app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongodb": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.7",
+    "gulp-sass": "^2.3.1",
+    "gulp-watch": "^4.3.5"
+  }
+}

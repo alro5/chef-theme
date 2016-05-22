@@ -1,0 +1,145 @@
+$buttonSize: 40px; 
+$buttonSize--mobile: 40px; 
+
+.button {
+	transition: all 300ms ease;
+	cursor: pointer;
+	padding: $spacing-unit--half $spacing-unit;
+	background: $color--secondary;
+	color: $color--white;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 30px;
+	display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    &:hover {
+    	background: darken($color--secondary, 5%);
+    }
+}
+
+.button--close {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	width: $buttonSize;
+	height: $buttonSize;
+	line-height: $buttonSize;
+	background: $color--secondary;
+	span {
+		background: white;
+		width: 2px;
+		height: 25px;
+		display: block;
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		&:first-child {
+			transform: rotate(45deg);
+		}
+		&:nth-child(2) {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.button-nav--mobile {
+	transition: all 300ms ease;
+	display: none;
+	cursor: pointer;
+	vertical-align: middle;
+	width: 30px;
+	height: 22px;
+	top: 4px;
+	z-index: 11;	
+	position: relative;
+	span {
+		display: block;
+		position: absolute;
+		transition: all 300ms ease;
+		background: $color--secondary;
+		height: 2px;
+		width: 100%;
+		opacity: 1;
+		transform: rotate(0deg);
+		&:nth-child(1){
+			top: 0;
+		}
+		&:nth-child(2){
+			top: 10px;	
+		}
+		&:nth-child(3){
+			top: 20px;	
+		}
+	}
+
+	&.active {
+		right: 0;
+		left: 0;
+		margin: auto;
+		transform: translate3d(0,0,0);
+		span {
+			background: $color--white;
+			&:nth-child(1){
+				top: $spacing-unit--half;
+			    transform: rotate(-45deg);
+			}
+			&:nth-child(2){
+				opacity: 0;
+				left: -$spacing-unit;
+			}
+			&:nth-child(3){
+			    top: $spacing-unit--half;
+    			transform: rotate(45deg);
+			}	
+		}
+	}
+
+	@include respond-to('small') {
+		display: inline-block;
+	}
+}
+
+.button--case {
+	@extend .button;
+	background: none;
+	border: 2px solid $color--secondary;
+	border-radius: 0;
+}
+
+.button--aside {
+	@extend .slideInRight;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	animation-delay: 1.6s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	cursor: pointer;
+	width: $buttonSize;
+	height: $buttonSize;
+	line-height: $buttonSize;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	font-size: 20px;
+	color: $color--white;
+	transform: translateX(-100%);
+	background: $color--secondary;
+
+	@include respond-to('small') {
+		top: $spacing-unit;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		left: -$spacing-unit;
+		display: none;
+	}
+
+}

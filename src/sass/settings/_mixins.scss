@@ -1,0 +1,9 @@
+@mixin respond-to($name) {
+	// If the key exists in the map
+	@if map-has-key($bp, $name) {
+		// Prints a media query based on the value
+		@media #{inspect(map-get($bp, $name))} {
+			@content;
+		}
+	}
+} 

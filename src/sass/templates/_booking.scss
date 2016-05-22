@@ -1,0 +1,12 @@
+.bk_calendar_frame {
+	width: 100% !important;
+	+ div {
+		display: none !important;
+	}
+}
+
+
+.booking_form_div textarea,
+.booking_form_div input[type="text"] {
+	width: 100% !important;
+}

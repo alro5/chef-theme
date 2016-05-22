@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	&.overflow--hidden {
+		overflow: hidden;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}
+
+main {
+	height: 100%;
+	@include respond-to('small') {
+    	padding: 90px 0 0;
+	}
+}

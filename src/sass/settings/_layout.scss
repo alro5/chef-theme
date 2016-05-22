@@ -1,0 +1,50 @@
+$spacing-unit: 20px;
+$spacing-unit--double: $spacing-unit * 2;
+$spacing-unit--triple: $spacing-unit * 3;
+$spacing-unit--half: $spacing-unit / 2;
+$spacing-unit--quarter: $spacing-unit--half / 2;
+
+$w1024: 1024px;
+
+
+$spacings: (
+    single    : $spacing-unit,
+    double		: $spacing-unit--double,
+    triple 		: $spacing-unit--triple,
+    half 		: $spacing-unit--half,
+    quarter 	: $spacing-unit--quarter
+);
+
+@each $spacing, $unit in $spacings {
+    .spacing-unit--#{$spacing} { margin-bottom: $unit;}
+}
+
+$paddings: (
+    single 		: $spacing-unit,
+    double		: $spacing-unit--double,
+    triple 		: $spacing-unit--triple,
+    half 		: $spacing-unit--half,
+    quarter 	: $spacing-unit--quarter
+);
+
+@each $padding, $unit in $paddings {
+    .padding-unit--#{$padding} { padding: $unit;}
+}
+
+$breakpoint-tiny: '(max-width: 560px)' !default;
+$breakpoint-sm: '(max-width: 768px)' !default;
+$breakpoint-tablet: '(max-width: 1024px)' !default;
+$breakpoint-landscape: '(max-width: 1024px) and (orientation: landscape)' !default;
+$breakpoint-min-sm: '(min-width: 46em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+$bp: (
+  'tiny'  : $breakpoint-tiny,
+  'small' : $breakpoint-sm,
+  'min-small' : $breakpoint-min-sm,
+  'medium': $breakpoint-md,
+  'large' : $breakpoint-lg,
+  'landscape' : $breakpoint-landscape,
+  'tablet' : $breakpoint-tablet
+);

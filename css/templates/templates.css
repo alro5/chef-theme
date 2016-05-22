@@ -1,0 +1,26 @@
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: scale(1.02);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.landing {
+  color: #ffffff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center; }
+  .landing p {
+    font-size: 16px; }

@@ -1,0 +1,57 @@
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text--center {
+	text-align: center;
+}
+
+.centered {
+	width: $w1024;
+	margin: auto;
+	max-width: 100%;
+
+	@include respond-to('tablet') {
+		width: 100%;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.centered--half {
+	width: $w1024 / 2;
+	margin: auto;
+	max-width: 100%;
+
+	@include respond-to('small') {
+	    width: 100%;
+	}
+
+	&:after { 
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.section {
+	padding: $spacing-unit--double;
+}
+
+.hide--portable {
+	display: block;
+	@include respond-to('small') {
+		display: none;
+	}
+}
+
+.show--portable {
+	display: none;
+	@include respond-to('small') {
+		display: block;
+	}
+}

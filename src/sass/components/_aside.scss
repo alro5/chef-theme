@@ -1,0 +1,22 @@
+aside {
+	position: fixed;
+	right: 0;
+	top: 90px;
+	width: 500px;
+	background: white;
+	transform: translate3d(100%,0,0);
+	transition: all 500ms ease;
+	padding: $spacing-unit;
+	z-index: 5;
+	box-shadow: 0 0 $spacing-unit--half rgba(0,0,0,.1);
+
+	@include respond-to('small') {
+		top: 0;
+		bottom: 0;
+	    width: calc(100% - 70px);
+	}
+
+	&.active {
+		transform: translate3d(0,0,0);
+	}
+}

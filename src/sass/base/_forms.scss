@@ -1,0 +1,69 @@
+form {
+	p {
+		font-size: 13px;
+		font-weight: lighter;
+		text-transform: uppercase;
+	}
+}
+
+input {
+	&[type="text"],
+	&[type="email"] {
+		padding: 0 $spacing-unit--half;
+		border: none;
+		margin: $spacing-unit--half 0;
+		box-shadow: 0 0 $spacing-unit--half rgba(0,0,0,.1);
+		line-height: $spacing-unit--half + $spacing-unit;
+		height: $spacing-unit--half + $spacing-unit;
+		max-width: 100%;
+		&.wpcf7-not-valid {
+			border: 1px solid red;
+		}
+	}
+	&[type="submit"] {
+		text-transform: uppercase;
+		cursor: pointer;
+		background: $color--secondary;
+		appearance: none;
+		-webkit-appearance: none;
+		color: $color--white;
+		padding: $spacing-unit--half $spacing-unit;
+		border: none;
+		border-radius: 30px;
+		font-weight: 600;
+		transition: all 300ms ease;
+		&:hover {
+			background: darken($color--secondary, 5%);
+		}
+	}
+}
+
+textarea {
+	resize: none;
+	padding: 0 $spacing-unit--half;
+	border: none;
+	width: 100%;
+	margin: $spacing-unit--half 0;
+	box-shadow: 0 0 $spacing-unit--half rgba(0,0,0,.1);
+}
+
+.screen-reader-response {
+	background: red;
+	padding: $spacing-unit--half;
+	margin-bottom: $spacing-unit;
+	color: $color--white;
+	&:empty {
+		display: none;
+	}
+}
+
+/*
+* Contact form 7 styles
+**/
+
+.wpcf7-not-valid-tip {
+    display: block;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 12px;
+}
