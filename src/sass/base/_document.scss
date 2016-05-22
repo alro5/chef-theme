@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 html, body {
@@ -15,6 +16,9 @@ body {
 
 main {
 	height: 100%;
+	.home & {
+		padding: 0;
+	}
 	@include respond-to('small') {
     	padding: 90px 0 0;
 	}

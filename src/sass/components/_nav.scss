@@ -120,7 +120,7 @@ nav {
 				transition: all 500ms ease;
 				transform: translate3d(-40px,0,0);
 				opacity: 0;
-				@for $item from 1 through 4 {
+				@for $item from 1 through 10 {
 					&:nth-child(#{$item}){ 
 						transition-delay: #{$item * (100ms)}; 
 					}
@@ -134,12 +134,12 @@ nav {
 	}
 }
 
-.mobile__nav-wrap {
+.mobile__nav-wrap { 
 	@include respond-to('small') {
 		height: 50px;
 		padding: $spacing-unit--half $spacing-unit;
 		position: fixed;
-		z-index: 10;
+		z-index: 200;
 		top: 0;
 		left: 0;
 		right: 0;

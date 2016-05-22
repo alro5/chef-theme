@@ -30,6 +30,20 @@
     }
 }
 
+.case__row {
+    &:nth-child(2n) {
+        .case__description {
+            float: right;
+        }
+    }
+}
+
+.case__description {
+    width: 50%;
+    float: left;
+    padding: $spacing-unit--half;
+}
+
 .case__text {
     @extend .centered--half;
     backface-visibility: hidden;

@@ -4,8 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $ff--primary; 
-	text-transform: uppercase;
+	font-family: $ff--secondary; 
 	font-weight: 700;
 	margin-bottom: $spacing-unit--half;
 }
@@ -38,7 +37,7 @@ h4 {
 	}
 }
 
-p {
+p, address {
 	font-family: $ff--primary;
 	font-weight: 400;
 	font-size: 12px;

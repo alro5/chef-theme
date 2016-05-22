@@ -1,4 +1,21 @@
 <?php get_header(); ?>
+		<div id="wrap" class="wrap">
+			<img class="mockup__img" src="<?php the_field("baggrunds_billede") ?>" />
+			<div class="mockup">
+				<div id="mobile" class="mobile">
+					<ul id="slideshow" class="slideshow">
+						<?php
+							if( have_rows('device_slides') ):
+							    while ( have_rows('device_slides') ) : the_row(); ?>
+									<li class="slideshow__item"><img src="<?php the_sub_field('image') ?>" /></li>
+								<?php endwhile;
+							else :
+						endif;
+						?>		
+					</ul>
+				</div>
+			</div>
+		</div>
 		<div class="landing">
 			<div>
 				<div class="centered--half">
@@ -49,5 +66,5 @@
 				?>
 			</div>
 		</div>
-	<div class="bg" style="background-image: url('<?php the_field("baggrunds_billede") ?>')"></div>
+<!-- 		<div class="bg" style="background-image: url('<?php the_field("baggrunds_billede") ?>')"></div> -->
 <?php get_footer(); ?>
