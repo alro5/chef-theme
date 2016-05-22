@@ -7,7 +7,7 @@
     position: relative;  
     width: 100%;    
 
-    padding: 70px $spacing-unit ($spacing-unit--half + $spacing-unit--double);
+    padding: 90px $spacing-unit ($spacing-unit--half + $spacing-unit--double);
     @include respond-to('min-small') {
         display: table;
         padding: 0;

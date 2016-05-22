@@ -31,6 +31,9 @@
 }
 
 .case__row {
+    @include respond-to('small') {
+        margin-bottom: $spacing-unit--double;
+    }
     &:nth-child(2n) {
         .case__description {
             float: right;
@@ -42,6 +45,10 @@
     width: 50%;
     float: left;
     padding: $spacing-unit--half;
+    @include respond-to('small') {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .case__text {

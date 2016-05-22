@@ -1110,6 +1110,10 @@ textarea {
     filter: brightness(80%);
     -webkit-filter: brightness(80%); }
 
+@media (max-width: 768px) {
+  .case__row {
+    margin-bottom: 40px; } }
+
 .case__row:nth-child(2n) .case__description {
   float: right; }
 
@@ -1117,6 +1121,10 @@ textarea {
   width: 50%;
   float: left;
   padding: 10px; }
+  @media (max-width: 768px) {
+    .case__description {
+      width: 100%;
+      padding: 0; } }
 
 .case__text {
   backface-visibility: hidden;
@@ -1154,6 +1162,14 @@ footer {
       margin: 0 10px 0 0;
       padding: 0 10px 0 0;
       border-right: 1px solid #da4141; }
+      @media (max-width: 768px) {
+        footer address span {
+          width: 100%;
+          margin-bottom: 10px;
+          display: block;
+          border: none; }
+          footer address span:last-child {
+            margin-bottom: 0; } }
     footer address i {
       margin: 0 10px 0 0; }
 
@@ -2915,7 +2931,7 @@ aside {
   transform: translate3d(0, 0, 0);
   position: relative;
   width: 100%;
-  padding: 70px 20px 50px; }
+  padding: 90px 20px 50px; }
   @media (min-width: 46em) {
     .landing {
       display: table;
