@@ -1,0 +1,29 @@
+footer {
+	color: $color--white;
+	padding: $spacing-unit;
+	background: darken($color--primary, 5%);
+	text-align: center;
+	width: 100%;
+	min-height: 50px;
+	address {
+		margin-bottom: 0;
+		display: inline-block;
+		span {
+			margin: 0 $spacing-unit--half 0 0;
+			padding: 0 $spacing-unit--half 0 0;
+			border-right: 1px solid $color--secondary;
+			@include respond-to('small') {
+				width: 100%;
+				margin-bottom: $spacing-unit--half;
+				display: block;
+				border: none;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		i {
+			margin: 0 $spacing-unit--half 0 0;
+		}
+	}
+} 
